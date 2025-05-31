@@ -7,7 +7,7 @@ services:
     image: redis:7.2.3-alpine
     volumes:
       - redis-data:/data
-      
+
   postgres-data:
     image: postgis/postgis:16-3.4-alpine
     container_name: postgres-data
@@ -44,6 +44,7 @@ services:
       - "8889:80"
     volumes:
       - pgadmin-data:/var/lib/pgadmin
+      - "C:/Users/sam1399/Desktop/source code/比賽用/Taipei-City-Dashboard/db_backup:/var/lib/pgadmin/storage/sam1399_example.com"
 
 networks:
   default:
